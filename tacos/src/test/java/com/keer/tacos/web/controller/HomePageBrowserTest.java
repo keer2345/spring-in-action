@@ -41,8 +41,6 @@ public class HomePageBrowserTest {
         Assert.assertEquals("Welcome to ...", h1Text);
 
         String imgSrc = browser.findElementByTagName("img").getAttribute("src");
-        System.out.println(">>>>>>><<<<<<<<========");
-        System.out.println(imgSrc);
         Assert.assertEquals(homepage + "/images/TacoCloud.png", imgSrc);
     }
 }
