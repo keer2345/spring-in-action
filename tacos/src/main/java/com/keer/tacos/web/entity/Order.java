@@ -15,6 +15,7 @@ import java.util.List;
 @Entity
 @Table(name = "Taco_Order")
 public class Order {
+
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -35,17 +36,17 @@ public class Order {
     @NotBlank(message = "State is required")
     private String deliveryState;
 
-    @NotBlank(message = "State is required")
+    @NotBlank(message = "Zip code is required")
     private String deliveryZip;
 
-    @CreditCardNumber(message = "Not valid credit card number")
+    @CreditCardNumber(message = "Not a valid credit card number")
     private String ccNumber;
 
     @Pattern(regexp = "^(0[1-9]|1[0-2])([\\/])([1-9][0-9])$",
             message = "Must be formatted MM/YY")
     private String ccExpiration;
 
-    @Digits(integer = 3, fraction = 0, message = "Invalid CSS")
+    @Digits(integer = 3, fraction = 0, message = "Invalid CVV")
     private String ccCVV;
 
     @ManyToMany(targetEntity = Taco.class)

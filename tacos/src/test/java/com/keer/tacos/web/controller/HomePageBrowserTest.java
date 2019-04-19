@@ -22,7 +22,9 @@ public class HomePageBrowserTest {
     @BeforeClass
     public static void setup() {
         browser = new HtmlUnitDriver();
-        browser.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        browser.manage().timeouts()
+                .implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @AfterClass
@@ -38,7 +40,7 @@ public class HomePageBrowserTest {
         Assert.assertEquals("Taco Cloud", titleText);
 
         String h1Text = browser.findElementByTagName("h1").getText();
-        Assert.assertEquals("Welcome to ...", h1Text);
+        Assert.assertEquals("Welcome to...", h1Text);
 
         String imgSrc = browser.findElementByTagName("img").getAttribute("src");
         Assert.assertEquals(homepage + "/images/TacoCloud.png", imgSrc);
