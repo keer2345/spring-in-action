@@ -8,7 +8,13 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RecentsComponent } from './components/recents/recents.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CloudTitleComponent } from './components/cloud-title/cloud-title.component';
-import { LittleButtonComponent } from './components/little-button/little-button.component'
+import { LittleButtonComponent } from './components/little-button/little-button.component';
+import { SpecialsComponent } from './components/specials/specials.component';
+import { DesignComponent } from './components/design/design.component';
+import { HomeComponent } from './components/home/home.component';
+import { BigButtonComponent } from './components/big-button/big-button.component';
+import { GroupboxComponent } from './components/groupbox/groupbox.component'
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -17,11 +23,17 @@ import { LittleButtonComponent } from './components/little-button/little-button.
     FooterComponent,
     RecentsComponent,
     CloudTitleComponent,
-    LittleButtonComponent
+    LittleButtonComponent,
+    SpecialsComponent,
+    DesignComponent,
+    HomeComponent,
+    BigButtonComponent,
+    GroupboxComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

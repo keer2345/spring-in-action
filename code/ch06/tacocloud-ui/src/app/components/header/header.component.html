@@ -1,10 +1,10 @@
 <div class="header">
   <div class="logo">
-    <a><img src="assets/TacoCloud.png"/></a>
+    <a [routerLink]="['/home']"><img src="assets/TacoCloud.png"/></a>
   </div>
   <div class="topbar">
     <div class="topbaritem" style="font-size: 17pt;">
-      <a class="plainlink caps">Design a Taco</a>
+      <a [routerLink]="['design']" class="plainlink caps">Design a Taco</a>
     </div>
     <div class="topbaritem">
       <a href="login" class="plainlink">
@@ -31,7 +31,7 @@
         <a [routerLink]="['recents']" class="plainlink">Latest designs</a>
       </div>
       <div class="bottombaritem">
-        <a href="" class="plainlink">Specials</a>
+        <a [routerLink]="['specials']" class="plainlink">Specials</a>
       </div>
       <div class="bottombaritem">
         <a href="" class="plainlink">Locations</a>
