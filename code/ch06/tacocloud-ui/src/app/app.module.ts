@@ -14,7 +14,9 @@ import { DesignComponent } from './components/design/design.component';
 import { HomeComponent } from './components/home/home.component';
 import { BigButtonComponent } from './components/big-button/big-button.component';
 import { GroupboxComponent } from './components/groupbox/groupbox.component'
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { NonWrapsPipe } from './components/recents/non-wraps.pipe';
+import { WrapsPipe } from './components/recents/wraps.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { FormsModule } from '@angular/forms'
     DesignComponent,
     HomeComponent,
     BigButtonComponent,
-    GroupboxComponent
+    GroupboxComponent,
+    NonWrapsPipe,
+    WrapsPipe
   ],
   imports: [
     BrowserModule,
