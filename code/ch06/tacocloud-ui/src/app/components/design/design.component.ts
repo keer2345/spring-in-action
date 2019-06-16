@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { CartService } from '../cart/cart.service';
 
 @Component({
   selector: 'app-design',
@@ -18,7 +19,9 @@ export class DesignComponent implements OnInit {
   cheeses = []
   sauces = []
 
-  constructor(private httpClicent: HttpClient, private router: Router) { }
+  constructor(private httpClicent: HttpClient,
+    private router: Router,
+    private cartService: CartService) { }
 
   ngOnInit() {
     this.httpClicent.get('http://localhost:8080/ingredientsx').subscribe(data => {
@@ -41,7 +44,8 @@ export class DesignComponent implements OnInit {
 
   onSubmit() {
     this.httpClicent.post('http://localhost:8080/design', this.model,
-      { headers: new HttpHeaders().set('Content-type', 'application/json') }).subscribe()
-    this.router.navigate(['/home'])
+      { headers: new HttpHeaders().set('Content-type', 'application/json') })
+      .subscribe(taco => this.cartService.addToCart(taco))
+    this.router.navigate(['/cart'])
   }
 }

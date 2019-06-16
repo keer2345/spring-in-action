@@ -17,6 +17,7 @@ import { GroupboxComponent } from './components/groupbox/groupbox.component'
 import { FormsModule } from '@angular/forms';
 import { NonWrapsPipe } from './components/recents/non-wraps.pipe';
 import { WrapsPipe } from './components/recents/wraps.pipe';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { WrapsPipe } from './components/recents/wraps.pipe';
     BigButtonComponent,
     GroupboxComponent,
     NonWrapsPipe,
-    WrapsPipe
+    WrapsPipe,
+    CartComponent
   ],
   imports: [
     BrowserModule,
