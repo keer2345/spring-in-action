@@ -5,9 +5,11 @@ import { SpecialsComponent } from './components/specials/specials.component';
 import { DesignComponent } from './components/design/design.component';
 import { HomeComponent } from './components/home/home.component';
 import { CartComponent } from './components/cart/cart.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'recents', component: RecentsComponent },
   { path: 'design', component: DesignComponent },
   { path: 'cart', component: CartComponent },

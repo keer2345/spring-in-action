@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { NonWrapsPipe } from './components/recents/non-wraps.pipe';
 import { WrapsPipe } from './components/recents/wraps.pipe';
 import { CartComponent } from './components/cart/cart.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CartComponent } from './components/cart/cart.component';
     GroupboxComponent,
     NonWrapsPipe,
     WrapsPipe,
-    CartComponent
+    CartComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
