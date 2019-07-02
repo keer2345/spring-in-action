@@ -3,6 +3,8 @@ package com.tacos.web.api;
 import com.tacos.data.TacoRepository;
 import com.tacos.entity.Taco;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +19,8 @@ public class DesignTacoController {
 
     @GetMapping("/recent")
     public Iterable<Taco> recentTacos() {
-        return tacoRepository.findAll();
+        PageRequest page = PageRequest.of(0, 3, Sort.by("createdAt").descending());
+        return tacoRepository.findAll(page).getContent();
     }
 
     @PostMapping(consumes = "application/json")
